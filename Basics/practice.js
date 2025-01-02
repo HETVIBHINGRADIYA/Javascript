@@ -159,26 +159,118 @@
 
 //Objects in JS
 
-const person = {
-    Firstname:"Kiya",
-    Lastname:"Mangukiya",
-    age:20,
-    city:"surat",
-    FullName:function(){
-        console.log(this.Firstname + " " + this.Lastname);
-        return this.Firstname+" "+this.Lastname;
-    }
-};
+// const person = {
+//     Firstname:"Kiya",
+//     Lastname:"Mangukiya",
+//     age:20,
+//     city:"surat",
+//     FullName: function(){
+//         console.log(this.Firstname + " " + this.Lastname);
+//         return this.Firstname + " " + this.Lastname;
+//     }
+// };
 
-console.log(person);
+// console.log(person);
+// person.FullName();
 
-const x=person; //Create a copy
+// const x=person; //Create a copy
 
-x.city="Mumbai";
-x.nationality = "English";
-x.Lastname="Mangukiya";
-delete x.Lastname;
-console.log(x);
+// x.city="Mumbai";
+// x.nationality = "English";
+// x.Lastname="Mangukiya";
+// delete x.Lastname;
+// console.log(x);
 
-console.log(x.Firstname + " " +"is" + " " + x.age+ " " + "years old");
+// console.log(x.Firstname + " " +"is" + " " + x.age+ " " + "years old");
 
+// function Person(first,last,age,eye){
+//     this.firstname=first;
+//     this.secondname=second;
+//     this.age=age;
+//     this.eyecolour=eye;
+// }
+
+// console.log(Person);
+
+//Strings in JS
+
+// let str = "Hello Javascript!";
+
+// //Length method
+// console.log(str.length);
+
+// //charAt() method
+// console.log(str.charAt(7));
+
+// //charCode() method
+// console.log(str.charCodeAt(4));
+
+// //at() method
+// console.log(str.at(3));
+
+// //slice() method
+// console.log(str.slice(7,13));
+
+// let slicestr="Apple,Banana,Kiwi";
+// console.log(str.slice(-14,-5));
+// console.log(slicestr.slice(-11,-2));
+
+// //Substring method
+// console.log(str.substring(-10));
+// console.log(slicestr.substring(10,20));
+
+// console.log(str.substr(3,5));
+// console.log(str.substr(-10));
+
+// //Uppercase and lowercase
+// console.log(str.toUpperCase());
+// console.log(slicestr.toUpperCase());
+// console.log(str.toLowerCase());
+
+// //Concat
+// let text1="Hello";
+// let text2="Kiya!";
+// console.log(text1.concat(text2));
+
+// //Trim
+// let text="       Hello      ";
+// console.log(text.trim());
+
+// //Trimstart,Trimend
+// let txt="   JavaScript!     ";
+// console.log(txt.trimStart());
+// console.log(txt.trimEnd());
+
+// //padstart,padend
+// let num="5";
+// let padded= num.padStart(7,"0");
+// let padded1=num.padEnd(6,"x");
+// console.log(padded);
+// console.log(padded1);
+
+// //repeat
+// console.log(str.repeat(5));
+
+// //replace
+// let rtext="Please visit Microsoft website";
+// console.log(rtext.replace("Microsoft","w3Schools"));
+
+// //replace all
+// let rtxt = "I love winter.winter season comes under 3 months";
+// console.log(rtxt.replaceAll("winter","Moonsoon")); 
+
+// //split
+// console.log(str.split(" "));
+
+//String search
+// let text = "Please locate where 'locate' occurs!";
+// console.log(text.indexOf('locate'));  //indexof
+// console.log(text.lastIndexOf('locate')); //lastindexof
+// console.log(text.search('occurs')); //search
+
+//match
+let text = "The rain in Spain stays mainly in the rain/g";
+//console.log(text.match('ain'));
+//console.log(text.matchAll('ain/g' ));
+console.log(text.includes('rain'));
+console.log(text.startsWith())
