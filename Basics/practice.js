@@ -269,8 +269,51 @@
 // console.log(text.search('occurs')); //search
 
 //match
-let text = "The rain in Spain stays mainly in the rain/g";
-//console.log(text.match('ain'));
-//console.log(text.matchAll('ain/g' ));
-console.log(text.includes('rain'));
-console.log(text.startsWith())
+// let text = "The rain in Spain stays mainly in the rain/g";
+// //console.log(text.match('ain'));
+// //console.log(text.matchAll('ain/g' ));
+// console.log(text.includes('rain'));
+// console.log(text.startsWith())
+
+//JS numbers
+//Adding two numbers using no quotes
+// let x=10
+// let y=20
+// let z=x+y
+// console.log(z)
+
+//Adding two strings using quotes which concates two strings
+// let a="30"
+// let b="40"
+// let c=a+b
+// console.log(c)
+
+//Adding strings and numbers
+// let a=50
+// let b=40
+// let c="string"
+// let result=a+b+c
+// console.log(result)
+
+//JS Arrays
+//Two ways to create array
+const cars = ["BMW","Volvo","Mercedes"];
+console.log(cars)
+const fruits = new Array("Apple","Banana","Peach");
+console.log(fruits)
+
+//Accessing array elements
+console.log(cars[2])
+console.log(fruits[0])
+
+//Changing array elements
+console.log(cars[1]="Porsche")
+console.log(cars)
+console.log(fruits[2]="Berries")
+console.log(fruits)
+
+//array methods
+console.log(cars.length)
+console.log(fruits.length)
+console.log(cars.sort())
+console.log(fruits.sort())
