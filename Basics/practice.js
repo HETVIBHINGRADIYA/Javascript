@@ -297,281 +297,407 @@
 
 //JS Arrays
 //Two ways to create array
-const cars = ["BMW","Volvo","Mercedes"];
-console.log(cars)
-const fruits = new Array("Apple","Banana","Peach");
-console.log(fruits)
-const num =[1,2,3,4]
-console.log(num)
+// const cars = ["BMW","Volvo","Mercedes"];
+// console.log(cars)
+// const fruits = new Array("Apple","Banana","Peach");
+// console.log(fruits)
+// const num =[1,2,3,4]
+// console.log(num)
 
-//Accessing array elements
-console.log(cars[2])
-console.log(fruits[0])
+// //Accessing array elements
+// console.log(cars[2])
+// console.log(fruits[0])
 
-//Changing array elements
-console.log(cars[1]="Porsche")
-console.log(cars)
-console.log(fruits[2]="Berries")
-console.log(fruits)
+// //Changing array elements
+// console.log(cars[1]="Porsche")
+// console.log(cars)
+// console.log(fruits[2]="Berries")
+// console.log(fruits)
 
-//array methods
-console.log(cars.length) //length
-console.log(fruits.length)
-console.log(cars.sort()) //sort
-console.log(fruits.sort())
+// //array methods
+// console.log(cars.length) //length
+// console.log(fruits.length)
+// console.log(cars.sort()) //sort
+// console.log(fruits.sort())
 
-let n=num.toString() //toString
-console.log(n,typeof n)
+// let n=num.toString() //toString
+// console.log(n,typeof n)
 
-console.log(fruits.join("and"),typeof fruits) //join joins all the element
-console.log(fruits.pop()) //pop removes last element
-console.log(fruits)
+// console.log(fruits.join("and"),typeof fruits) //join joins all the element
+// console.log(fruits.pop()) //pop removes last element
+// console.log(fruits)
 
-console.log(fruits.push("Peach")) //push adds new element
-console.log(fruits)
+// console.log(fruits.push("Peach")) //push adds new element
+// console.log(fruits)
 
-console.log(num.shift(),num) //shift removes first element and returns it
+// console.log(num.shift(),num) //shift removes first element and returns it
 
-console.log(num.unshift(100),num) //unshift adds the new element at the begin and returns array element
+// console.log(num.unshift(100),num) //unshift adds the new element at the begin and returns array element
 
-console.log(delete num[3]) //Deletes an element from the array
-console.log(num.length)
+// delete num[2]//Deletes an element from the array
+// console.log(num)
 
-//concat two or three arrays
-let n1=[1,2,3,4,5,6,7,8,9,10]
-let n2=[11,12,13,14,15,16,17,18,19,20]
-console.log(n1.concat(n2))
+// //concat two or three arrays
+// let n1=[1,2,3,4,5,6,7,8,9,10]
+// let n2=[11,12,13,14,15,16,17,18,19,20]
+// console.log(n1.concat(n2))
 
-//Using three arrays
-let n3=["abc","xyz",'pqr',"rst"]
-console.log(n1,n2,n3)
-console.log(n1.concat(n2,n3))
+// //Using three arrays
+// let n3=["abc","xyz",'pqr',"rst"]
+// console.log(n1,n2,n3)
+// console.log(n1.concat(n2,n3))
 
-//Sort
-let s1=[20,10,99,75,43,33,12]
-console.log(s1.sort())
-console.log(s1)
+// //Sort
+// let s1=[20,10,99,75,43,33,12]
+// console.log(s1.sort())
+// console.log(s1)
 
-//reverse
-console.log("reverse")
-console.log(s1.reverse())
+//toSorted
+// const months = ["Jan", "Feb", "Mar", "Apr"];
+// const sorted = months.toSorted();
+// console.log(sorted)
 
-//splice
-let s2=[1012,22,23,99,55,34,29,100]
-let deletedValues = s2.splice(2,2,88,77,66)
-console.log(s2)
-console.log(deletedValues)
-//slice
-console.log(s2.slice(3))
+//toReversed
+// const months = ["Jan", "Feb", "Mar", "Apr"];
+// const reversed = months.toReversed();
+// console.log(reversed)
 
-//Array search methods
-let colors=["red","blue","green","pink","blue","yellow"]
-console.log(colors)
+// //reverse
+// console.log("reverse")
+// console.log(s1.reverse())
 
-//indexof
-console.log(colors.indexOf("pink")) 
+// //splice
+// let s2=[1012,22,23,99,55,34,29,100]
+// let deletedValues = s2.splice(2,2,88,77,66)
+// console.log(s2)
+// console.log(deletedValues)
+// //slice
+// console.log(s2.slice(3))
 
-//lastindexof
-console.log(colors.lastIndexOf("blue"))
+// //Array search methods
+// let colors=["red","blue","green","pink","blue","yellow"]
+// console.log(colors)
 
-//includes
-console.log(colors.includes("pink"))
+// //indexof
+// console.log(colors.indexOf("pink")) 
 
-//find
-const number=[22,44,32,12,11]
-console.log(number.find(myFunc))
+// //lastindexof
+// console.log(colors.lastIndexOf("blue"))
 
-function myFunc(val,index,array){
-    return val>20
-}
+// //includes
+// console.log(colors.includes("pink"))
 
-//findindexof
-const number1=[44,55,77,88]
-console.log(number1.findIndex(myifunc))
+// //find
+// const number=[22,44,32,12,11]
+// console.log(number.find(myFunc))
 
-function myifunc(val,index,array){
-    return val>70
-}
+// function myFunc(val,index,array){
+//     return val>20
+// }
 
-//JS array iteration methods
+// //findindexof
+// const number1=[44,55,77,88]
+// console.log(number1.findIndex(myifunc))
 
-//for loop
-console.log("For loop")
-let numb=[8,9,7,6,5]
-for(let i=0; i<numb.length; i++){
-    console.log(numb[i])
-}
-//foreach
-console.log("For each loop")
-numb.forEach((element) =>{
-    console.log(element*element)
+// function myifunc(val,index,array){
+//     return val>70
+// }
+
+// //JS array iteration methods
+
+// //for loop
+// console.log("For loop")
+// let numb=[8,9,7,6,5]
+// for(let i=0; i<numb.length; i++){
+//     console.log(numb[i])
+// }
+// //foreach
+// console.log("For each loop")
+// numb.forEach((element) =>{
+//     console.log(element*element)
+// })
+
+// //JS Math object
+// //PI Value
+// console.log(Math.PI)
+
+// //Round
+// console.log(Math.round(8.6))
+
+// //Ceil
+// console.log(Math.ceil(4.3))
+
+// //Floor
+// console.log(Math.floor(3.2))
+
+// //Log
+// console.log(Math.log(5))
+
+// //Random
+// console.log(Math.random())
+
+// //Max
+// console.log(Math.max(23,99,76,55,101))
+
+// //Min
+// console.log(Math.min(-7,5,4,87,2))
+
+// //Pow
+// console.log(Math.pow(4,2))
+
+// //abs
+// console.log(Math.abs(-7.8))
+
+// //Boolean
+// console.log(10>8)
+
+// //JS Comparisions
+// let x=10
+
+// //==
+// console.log(x==10)
+
+// //===
+// console.log(x===10)
+
+// //!=
+// console.log(x!=4)
+
+// //!==
+// console.log(x!==10)
+
+// //>
+// console.log(x>9)
+
+// //<
+// console.log(x<5)
+
+// //<=
+// console.log(x<=10)
+
+// //>=
+// console.log(x>=9)
+
+// //Logical operator
+// let y=4
+// //&&
+// console.log(x<5 && y>1)
+
+// //||
+// console.log(x==10 || y==4)
+
+// //!
+// console.log(!(x>7))
+
+// //if-else statement
+// let age=12
+// console.log(age)
+// if(age>18){
+//     console.log("Age should be greater than 18 so you can vote",age)
+// }
+// else
+// {
+//     console.log("Your age is less than 18 so you can't vote",age)
+// }
+
+// //if else-if statement
+// let marks=65
+// if(marks<=99 && marks>=88){
+//     console.log("A Grade")
+// }
+// else if(marks<=88 && marks>=77){
+//     console.log("B Grade")
+// }
+// else if(marks<=77 && marks>=66){
+//     console.log("C Grade")
+// }
+// else if(marks<=66 && marks>=55){
+//     console.log("D Grade")
+// }
+// else
+// {
+//     console.log("Fail")
+// }
+
+// //switch statement
+// let trafficlight="blue"
+// let message=""
+
+// switch(trafficlight){
+//    case "red":
+//     message="Stop immediately"
+//     break
+//     case "green":
+//     message="Proceed or continue driving"
+//     break
+//     case "yellow":
+//     message="Prepare to stop"
+//     break
+//     default:
+//     message="Invalid traffic light colour"
+// }
+// console.log(message)
+
+// //How to use for loop to access an array
+// for(let i=1;i<fruits.length;i++){
+//     console.log(fruits[i])
+// }
+
+// let myArray = ["Batman","Superman","Flash"]
+// //console.log(myArray.length)
+// for(let index=0;index<myArray.length;index++){
+//     console.log(myArray[index])
+// }
+
+// //for in
+// const person ={
+//     fname:"John",
+//     lname:"Doe",
+//     age:28
+// }
+// for(let x in person){
+//     console.log(person[x])
+// }
+
+// const n4=[10,20,50,70,80,90]
+// let txt=""
+// n4.forEach(myFunc1)
+
+// function myFunc1(value,index,array){
+//     txt = value 
+//     console.log(txt)
+// }
+
+// //for of
+// let language="JavaScript"
+// let text = ""
+// for(let x of language){
+//     text = x
+//     console.log(text)
+// }
+
+// //while
+// let i=0
+// while(i<10){
+//     console.log(i)
+//     i++
+// }
+
+// //do while
+// console.log("Do while!")
+// let j=0
+// do{
+//     text +=j
+//     console.log(j)
+//     j++
+// }
+// while(j<=10)
+
+//Break statement
+// for(let i=0;i<=10;i++){
+//     if(i==7){
+//         break
+//     }
+//     console.log(i)
+// }
+
+// //Continue statement
+// for(let j=1;j<=9;j++){
+//     if(j==4){
+//         continue;
+//     }
+//     console.log(j);
+// }
+
+// //for of 
+// const letters=["abc","xyz","pqr"]
+// for(let x of letters){
+//     console.log(x)
+// }
+
+//Set method
+//Create a set
+// const letters = new Set(["a","b","c","d"])
+// console.log(letters)
+
+//Add value to set
+// const letter = new Set()
+// letter.add("a")
+// letter.add("b")
+// letter.add("c")
+// letter.add("d")
+// console.log(letter)
+
+// //listing the elements
+// let text= ""
+// for(let x of letter){
+//     text += x
+// }
+
+// //Map
+// const fruits = new Map([
+//     ["apples",500],
+//     ["bananas",300],
+//     ["oranges",200]
+// ])
+// console.log(fruits)
+
+// //get method
+// console.log(fruits.get("bananas"))
+
+// //set method
+// const fruit=new Map()
+// fruit.set("berries",500)
+// fruit.set("starwberry",300)
+// fruit.set("kiwi",100)
+// console.log(fruit)
+
+// //size method
+// console.log(fruit.size)
+
+// //delete method
+// console.log(fruit.delete("kiwi"))
+// console.log(fruit)
+
+//map
+// let arr=[45,32,21]
+// let a=arr.map((value,index,array) => {
+//     console.log(value,index,array)
+//     return value+1
+// })
+// console.log(a)
+
+//Array filter method
+let arr2=[10,20,44,55,32]
+let a2=arr2.filter((a) =>{
+    return a>50
 })
+console.log(a2,arr2)
 
-//JS Math object
-//PI Value
-console.log(Math.PI)
+//Array reduce
+const numbers=[20,33,66,43,22]
+let sum = numbers.reduce(myFunction)
+console.log(sum)
 
-//Round
-console.log(Math.round(8.6))
-
-//Ceil
-console.log(Math.ceil(4.3))
-
-//Floor
-console.log(Math.floor(3.2))
-
-//Log
-console.log(Math.log(5))
-
-//Random
-console.log(Math.random())
-
-//Max
-console.log(Math.max(23,99,76,55,101))
-
-//Min
-console.log(Math.min(-7,5,4,87,2))
-
-//Pow
-console.log(Math.pow(4,2))
-
-//abs
-console.log(Math.abs(-7.8))
-
-//Boolean
-console.log(10>8)
-
-//JS Comparisions
-let x=10
-
-//==
-console.log(x==10)
-
-//===
-console.log(x===10)
-
-//!=
-console.log(x!=4)
-
-//!==
-console.log(x!==10)
-
-//>
-console.log(x>9)
-
-//<
-console.log(x<5)
-
-//<=
-console.log(x<=10)
-
-//>=
-console.log(x>=9)
-
-//Logical operator
-let y=4
-//&&
-console.log(x<5 && y>1)
-
-//||
-console.log(x==10 || y==4)
-
-//!
-console.log(!(x>7))
-
-//if-else statement
-let age=12
-console.log(age)
-if(age>18){
-    console.log("Age should be greater than 18 so you can vote",age)
-}
-else
-{
-    console.log("Your age is less than 18 so you can't vote",age)
+function myFunction(total,value,inder,array){
+    return total+value
 }
 
-//if else-if statement
-let marks=65
-if(marks<=99 && marks>=88){
-    console.log("A Grade")
-}
-else if(marks<=88 && marks>=77){
-    console.log("B Grade")
-}
-else if(marks<=77 && marks>=66){
-    console.log("C Grade")
-}
-else if(marks<=66 && marks>=55){
-    console.log("D Grade")
-}
-else
-{
-    console.log("Fail")
+//Array keys
+const array1=["a","b","c"]
+const iterator=array1.keys()
+for(const key of iterator){
+    console.log(key)
 }
 
-//switch statement
-let trafficlight="blue"
-let message=""
+//Array entries
+const iterator1=array1.entries()
+console.log(iterator1.next().value)
+console.log(iterator1.next().value)
+console.log(iterator1.next().value)
 
-switch(trafficlight){
-   case "red":
-    message="Stop immediately"
-    break
-    case "green":
-    message="Proceed or continue driving"
-    break
-    case "yellow":
-    message="Prepare to stop"
-    break
-    default:
-    message="Invalid traffic light colour"
-}
-console.log(message)
+//Array filter
+const words=["spray","elite","present"]
+const result=words.filter((words) => words.length>6)
+console.log(result)
 
-//How to use for loop to access an array
-for(let i=1;i<fruits.length;i++){
-    console.log(fruits[i])
-}
-
-//for in
-const person ={
-    fname:"John",
-    lname:"Doe",
-    age:28
-}
-for(let x in person){
-    console.log(person[x])
-}
-
-const n4=[10,20,50,70,80,90]
-let txt=""
-n4.forEach(myFunc1)
-
-function myFunc1(value,index,array){
-    txt = value 
-    console.log(txt)
-}
-
-//for of
-let language="JavaScript"
-let text = ""
-for(let x of language){
-    text = x
-    console.log(text)
-}
-
-//while
-let i=0
-while(i<10){
-    console.log(i)
-    i++
-}
-
-//do while
-let j=0
-do{
-    text +=j
-    console.log(j)
-    j++
-}
-while(j<=10)
