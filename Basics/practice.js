@@ -668,36 +668,118 @@
 // console.log(a)
 
 //Array filter method
-let arr2=[10,20,44,55,32]
-let a2=arr2.filter((a) =>{
-    return a>50
-})
-console.log(a2,arr2)
+// let arr2=[10,20,44,55,32]
+// let a2=arr2.filter((a) =>{
+//     return a>50
+// })
+// console.log(a2,arr2)
 
-//Array reduce
-const numbers=[20,33,66,43,22]
-let sum = numbers.reduce(myFunction)
-console.log(sum)
+// //Array reduce
+// const numbers=[20,33,66,43,22]
+// let sum = numbers.reduce(myFunction)
+// console.log(sum)
 
-function myFunction(total,value,inder,array){
-    return total+value
+// const array2=[1,2,3,4]
+// const initialvalue=0
+// const sumwithinitial=array2.reduce(
+//     (accumulator,currentValue) => accumulator+currentValue,initialvalue
+// )
+// console.log(sumwithinitial)
+
+// function myFunction(total,value,inder,array){
+//     return total+value
+// }
+
+// //Array keys
+// const array1=["a","b","c"]
+// const iterator=array1.keys()
+// for(const key of iterator){
+//     console.log(key)
+// }
+
+// //Array entries
+// const iterator1=array1.entries()
+// console.log(iterator1.next().value)
+// console.log(iterator1.next().value)
+// console.log(iterator1.next().value)
+
+// //Array filter
+// const words=["spray","elite","present"]
+// const result=words.filter((words) => words.length>6)
+// console.log(result)
+
+// //JS Set
+// const num=new Set()
+// num.add(1)
+// num.add(2)
+// num.add(3)
+// console.log(num)
+
+// console.log(num.delete(0))
+
+// //typeof-String,boolean,int,number,symbol,null,undefined
+// console.log(typeof("kiya")) //string
+// console.log(typeof(true)) //boolean
+// console.log(typeof 3.14) //number
+// console.log(typeof 1234n) //bingint
+// console.log(typeof(Symbol())) //symbol
+// console.log(typeof x) //undefined
+
+// //JS Destructing
+// const person = {
+//     firstname:"John",
+//     lastname:"Doe",
+//     age:20
+// }
+// console.log(person.firstname)
+
+let arr = [3,5,8,9,12,124]
+let {a,b} = {a:1,b:5}
+let arr1 = [3,5,8]
+let obj1 = { ...arr1 }
+console.log(obj1)
+function sum(v1,v2,v3) {
+    return v1+v2+v3
+}
+console.log(sum(...arr1))
+
+let obj2 = {
+    name: "Kiya",
+    company: "Odan Infotech",
+    address:"Vesu"
 }
 
-//Array keys
-const array1=["a","b","c"]
-const iterator=array1.keys()
-for(const key of iterator){
-    console.log(key)
+console.log({...obj2,name:"John",company:"ABC"})
+//console.log({ name:"John",company:"ABC", ...obj2})
+
+//JS RegExp
+// let text = "Visit W3Schools!"
+// console.log(text.search("W3Schools"))
+
+//Using string search with regular expression
+// let text = "Visit W3Schools!"
+// console.log(text.search(/W3Schools/i))
+
+//Using string replace with regular expression
+let text = "Visit Microsoft!"
+console.log(text.replace(/Microsoft/i,"w3Schools"))
+
+//Using test
+const pattern = /e/
+console.log(pattern.test("The best things in life are free!"))
+
+//Using exec()
+console.log(/e/.exec("The best things in life are free!"))
+
+//JS This
+const person = {
+    firstname : "kiya",
+    lastname : "Mangukiya",
+    id : "SR22BSIT020", 
+    fullname : function(){
+        return this.firstname + " " + this.lastname
+    }
 }
-
-//Array entries
-const iterator1=array1.entries()
-console.log(iterator1.next().value)
-console.log(iterator1.next().value)
-console.log(iterator1.next().value)
-
-//Array filter
-const words=["spray","elite","present"]
-const result=words.filter((words) => words.length>6)
-console.log(result)
+console.log(person)
+console.log(person.fullname())
 
