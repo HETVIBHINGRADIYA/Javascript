@@ -733,53 +733,106 @@
 // }
 // console.log(person.firstname)
 
-let arr = [3,5,8,9,12,124]
-let {a,b} = {a:1,b:5}
-let arr1 = [3,5,8]
-let obj1 = { ...arr1 }
-console.log(obj1)
-function sum(v1,v2,v3) {
-    return v1+v2+v3
-}
-console.log(sum(...arr1))
+// let arr = [3,5,8,9,12,124]
+// let {a,b} = {a:1,b:5}
+// let arr1 = [3,5,8]
+// let obj1 = { ...arr1 }
+// console.log(obj1)
+// function sum(v1,v2,v3) {
+//     return v1+v2+v3
+// }
+// console.log(sum(...arr1))
 
-let obj2 = {
-    name: "Kiya",
-    company: "Odan Infotech",
-    address:"Vesu"
-}
+// let obj2 = {
+//     name: "Kiya",
+//     company: "Odan Infotech",
+//     address:"Vesu"
+// }
 
-console.log({...obj2,name:"John",company:"ABC"})
-//console.log({ name:"John",company:"ABC", ...obj2})
+// console.log({...obj2,name:"John",company:"ABC"})
+// //console.log({ name:"John",company:"ABC", ...obj2})
 
-//JS RegExp
-// let text = "Visit W3Schools!"
-// console.log(text.search("W3Schools"))
+// //JS RegExp
+// // let text = "Visit W3Schools!"
+// // console.log(text.search("W3Schools"))
 
-//Using string search with regular expression
-// let text = "Visit W3Schools!"
-// console.log(text.search(/W3Schools/i))
+// //Using string search with regular expression
+// // let text = "Visit W3Schools!"
+// // console.log(text.search(/W3Schools/i))
 
-//Using string replace with regular expression
-let text = "Visit Microsoft!"
-console.log(text.replace(/Microsoft/i,"w3Schools"))
+// //Using string replace with regular expression
+// let text = "Visit Microsoft!"
+// console.log(text.replace(/Microsoft/i,"w3Schools"))
 
-//Using test
-const pattern = /e/
-console.log(pattern.test("The best things in life are free!"))
+// //Using test
+// const pattern = /e/
+// console.log(pattern.test("The best things in life are free!"))
 
-//Using exec()
-console.log(/e/.exec("The best things in life are free!"))
+// //Using exec()
+// console.log(/e/.exec("The best things in life are free!"))
 
-//JS This
-const person = {
-    firstname : "kiya",
-    lastname : "Mangukiya",
-    id : "SR22BSIT020", 
-    fullname : function(){
-        return this.firstname + " " + this.lastname
+// //JS This
+// const person = {
+//     firstname : "kiya",
+//     lastname : "Mangukiya",
+//     id : "SR22BSIT020", 
+//     fullname : function(){
+//         return this.firstname + " " + this.lastname
+//     }
+// }
+// console.log(person)
+// console.log(person.fullname())
+
+//JS Object literals
+
+//Create a object
+//const person={}
+
+// const person = new Object()
+// //Add properties
+// person.firstName="Kiya"
+// person.lastName="Mangukiya"
+// person.age=20
+// person.eyecolor="black"
+//console.log(person)
+
+//console.log(person)
+
+// function person(first,last,age,eye){
+//     this.firstName=first
+//     this.lastName=last
+//     this.age=age
+//     this.eyecolor=eye
+// }
+
+// const person1=new person("Kiya","Mangukiya",20,"blue")
+// const person2=new person("Hetvi","Patel",21,"brown")
+// const person3=new person("Zeel","bhuriwala",18,"black")
+// console.log(person1,person2,person3)
+
+//JS Functions
+// function myFunction(a,b){
+//     return a*b
+// }
+// console.log(myFunction(3,4))
+
+// const x=(x,y) => x*y
+// console.log(x(5,5))
+
+// const y=(c,d) => c/d
+// console.log(y(10,2))
+
+const x = findMax(1, 123, 500, 115, 44, 88);
+
+function findMax() {
+  let max = -Infinity;
+  for (let i = 0; i < arguments.length; i++) {
+    if (arguments[i] > max) {
+      max = arguments[i];
     }
+  }
+  return max;
 }
-console.log(person)
-console.log(person.fullname())
+
+console.log(findMax())
 
